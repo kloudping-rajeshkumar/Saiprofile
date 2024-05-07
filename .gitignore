@@ -1,0 +1,65 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.all
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/Web/node_modules
+/Web/dist
+/WebApp/node_modules
+/WebApp/.angualr/*.json
+/WebApp/.angualr/*.pack
+
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+/packages
+/API/bin
+/API/obj
+/Core/bin
+/Core/obj
+/TriggerFunctions/bin
+/TriggerFunctions/obj
+/MyJobs.WinService/bin
+/MyJobs.WinService/obj
+/.vs
+/Web/.vscode
+/APIFunc/bin/Debug/netcoreapp3.1
+/APIFunc/obj
+/WebApp/.angular
+/TradeDataLoader/obj/Debug/netcoreapp3.1
+/WebApp/dist
+Import Schema Logs
+/Database/Database/obj/Debug

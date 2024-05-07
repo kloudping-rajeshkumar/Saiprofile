@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ustora Demo</title>
+    <base href="/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
+  </head>
+  <body>
+    <app-root></app-root>
+
+  </body>
+  <script>
+    debugger;
+    // Initialize scripts that require a loaded page
+	$window.on('load', function () {
+
+    // Page loader & Page transition
+    if (plugins.preloader.length && !isNoviBuilder) {
+      pageTransition({
+        target: document.querySelector('.page'),
+        delay: 0,
+        duration: 500,
+        classIn: 'fadeIn',
+        classOut: 'fadeOut',
+        classActive: 'animated',
+        conditions: function (event, link) {
+          return link && !/(\#|javascript:void\(0\)|callto:|tel:|mailto:|:\/\/)/.test(link) && !event.currentTarget.hasAttribute('data-lightgallery');
+        },
+        onTransitionStart: function (options) {
+          setTimeout(function () {
+            plugins.preloader.removeClass('loaded');
+          }, options.duration * .75);
+        },
+        onReady: function () {
+          plugins.preloader.addClass('loaded');
+          windowReady = true;
+        }
+      });
+    }
+  });
+  </script>
+</html>
